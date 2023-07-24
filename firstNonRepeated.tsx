@@ -3,12 +3,12 @@
  * If there is no non-repeated character, returns null.
  *
  * @param {string} string - The input string to search for the first non-repeated character.
- * @returns {string | null} The first non-repeated character found, or null if none exists.
+ * @returns {string} The first non-repeated character found, or an empty string if none exists.
  */
 function firstNonRepeated(string) {
-  // Check if the input string is empty, return null if it is.
+  // Check if the input string is empty, return empty string if it is.
   if (string.length == 0) {
-    return null;
+    return "";
   }
 
   // Create an empty object to act as a dictionary to store character frequencies.
@@ -30,8 +30,8 @@ function firstNonRepeated(string) {
     }
   }
 
-  // If there is no non-repeated character, return null.
-  return null;
+  // If there is no non-repeated character, return empty string.
+  return "";
 }
 
-console.log(firstNonRepeated("AABCDEE"));
+console.log(firstNonRepeated("hello, hi"));
